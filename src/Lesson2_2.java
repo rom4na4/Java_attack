@@ -16,30 +16,22 @@ public class Lesson2_2 {
         System.out.println("2 Task");
         int clientDeviceYear = 2018;
         clientOS = 0;
-        if (clientOS == 0){
-            if (clientDeviceYear < 2015){
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
-            } else if(clientDeviceYear >= 2015){
-                System.out.println("Установите версию приложения для iOS по ссылке.");
-            }
-        } else if (clientOS == 1){
-            if (clientDeviceYear < 2015){
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            } else if(clientDeviceYear >= 2015){
+        if (clientOS == 0 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
+        } else if (clientOS == 0 && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке.");
+        } else if (clientOS == 1 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else if (clientOS == 1 && clientDeviceYear >= 2015){
                 System.out.println("Установите версию приложения для Android по ссылке.");
-            }
         }
 
 //        3 Task
 
         System.out.println("3 Task");
         int year = 2021;
-        if (year >= 1584 && (year % 4 == 0 || year % 400 == 0)) {
-            if (year % 100 == 0 && year % 400 != 0){
-                System.out.println(year + " год является не високосный");
-            } else {
-                System.out.println(year + " год является високосный");
-            }
+        if (year >= 1584 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) {
+            System.out.println(year + " год является не високосный");
         } else {
             System.out.println(year + " год является не високосный");
         }
