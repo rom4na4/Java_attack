@@ -31,7 +31,7 @@ public class Lesson2_2 {
         System.out.println("3 Task");
         int year = 2021;
         if (year >= 1584 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) {
-            System.out.println(year + " год является не високосный");
+            System.out.println(year + " год является високосный");
         } else {
             System.out.println(year + " год является не високосный");
         }
