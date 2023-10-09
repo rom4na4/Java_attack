@@ -22,15 +22,19 @@ public class Author{
 
     @Override
     public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
+        if (other == null || this.getClass() != other.getClass()) {
             return false;
         }
         Author another = (Author) other;
-        return firstName.equals(another.firstName);
+        if (firstName.equals(another.firstName) && secondName.equals(another.secondName)){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(firstName);
+        return java.util.Objects.hash(firstName + secondName);
     }
 }

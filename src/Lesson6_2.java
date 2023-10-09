@@ -9,7 +9,7 @@ public class Lesson6_2 {
         secondBook.setYear(1867);
 
         System.out.println(firstBook.equals(secondBook));
-
+        System.out.println(firstAuthor.equals(secondAuthor));
         System.out.println(firstAuthor.hashCode());
     }
 }

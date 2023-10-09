@@ -21,9 +21,8 @@ public class Book{
         return this.year;
     }
 
-    public int setYear(int year){
+    public void setYear(int year){
         this.year = year;
-        return year;
     }
 
     @Override
@@ -33,15 +32,19 @@ public class Book{
 
     @Override
     public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
+        if (other == null || this.getClass() != other.getClass()) {
             return false;
         }
         Book another = (Book) other;
-        return title.equals(another.title);
+        if (title.equals(another.title) && this.year == another.year && author.equals(another.author)){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(title);
+        return java.util.Objects.hash(title + year + author);
     }
 }
